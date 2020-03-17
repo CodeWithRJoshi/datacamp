@@ -230,3 +230,48 @@ _Output:_
 </details>
 
 ---
+
+#### Exercise: Building DataFrames with broadcasting
+
+You can implicitly use 'broadcasting', a feature of NumPy, when creating pandas DataFrames. In this exercise, you're going to create a DataFrame of cities in Pennsylvania that contains the city name in one column and the state name in the second. We have imported the names of 15 cities as the list `cities`.
+
+Your job is to construct a DataFrame from the list of cities and the string `'PA'`.
+
+##### Instructions
+
+- Make a string object with the value `'PA'` and assign it to `state`.
+- Construct a dictionary with 2 key:value pairs: `'state':state` and `'city':cities`.
+- Construct a pandas DataFrame from the dictionary you created and assign it to `df`.
+
+<details>
+<summary>Solution</summary>
+
+```python
+    # preset
+    cities =  ['Manheim', 'Preston park', 'Biglerville', 'Indiana', 'Curwensville', 'Crown', 'Harveys lake', 'Mineral springs', 'Cassville', 'Hannastown', 'Saltsburg', 'Tunkhannock', 'Pittsburgh', 'Lemasters', 'Great bend']
+
+    # Make a string with the value 'PA': state
+    state = 'PA'
+
+    # Construct a dictionary: data
+    data = {'state':state, 'city':cities}
+
+    # Construct a DataFrame from dictionary data: df
+    df = pd.DataFrame(data)
+
+    # Print the DataFrame
+    print(df)
+
+```
+
+_Output:_
+
+|     | year | artist            | song                 | chart weeks |
+| --- | ---- | ----------------- | -------------------- | ----------- |
+| 0   | 1980 | Blondie           | Call Me              | 6           |
+| 1   | 1981 | Chistorpher Cross | Artdurs tdeme        | 3           |
+| 2   | 1982 | Joan Jett         | I Love Rock and Roll | 7           |
+
+</details>
+
+---
