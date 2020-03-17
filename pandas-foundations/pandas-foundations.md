@@ -31,12 +31,12 @@ Your job is to use `df.head()` and `df.tail()` to verify that the first and 
   
   **First: 1960, 92495902.0; Last: 2014, 15245855.0.**
 
-    ```python
-        import pandas as pd
-        df = pd.read_csv('datasets/world_ind_pop_data.csv')
-        print(df.head())
-        print(df.tail())        
-    ```
+```python
+    import pandas as pd
+    df = pd.read_csv('datasets/world_ind_pop_data.csv')
+    print(df.head())
+    print(df.tail())        
+```
 
 </details>
 
