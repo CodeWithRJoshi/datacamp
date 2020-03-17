@@ -183,3 +183,50 @@ _Output:_
 </details>
 
 ---
+
+#### Exercise: Labeling your data
+
+You can use the DataFrame attribute `df.columns` to view and assign new string labels to columns in a pandas DataFrame.
+
+In this exercise, we have imported pandas as `pd` and defined a DataFrame `df` containing top Billboard hits from the 1980s (from [Wikipedia](https://en.wikipedia.org/wiki/List_of_Billboard_Hot_100_number-one_singles_of_the_1980s#1980)). Each row has the year, artist, song name and the number of weeks at the top. However, this DataFrame has the column labels `a, b, c, d`. Your job is to use the `df.columns` attribute to re-assign descriptive column labels.
+
+##### Instructions
+
+- Create a list of new column labels with `'year'`, `'artist'`, `'song'`, `'chart weeks'`, and assign it to `list_labels`.
+- Assign your list of labels to `df.columns`.
+
+<details>
+<summary>Solution</summary>
+
+```python
+    import numpy as np
+    billboard_values = np.array([
+        ['1980', 'Blondie', 'Call Me', '6'],
+        ['1981', 'Chistorpher Cross', 'Arthurs Theme', '3'],
+        ['1982', 'Joan Jett', 'I Love Rock and Roll', '7']
+        ]).transpose()
+    billboard_keys = ['a', 'b', 'c', 'd']
+
+    billboard_zipped = list(zip(billboard_keys, billboard_values))
+
+    billboard_dict = dict(billboard_zipped)
+
+    df = pd.DataFrame.from_dict(billboard_dict)
+
+    # Build a list of labels: list_labels
+    list_labels = ['year', 'artist', 'song', 'chart weeks']
+    df.columns = list_labels
+    print(df)
+```
+
+_Output:_
+
+|     | year | artist            | song                 | chart weeks |
+| --- | ---- | ----------------- | -------------------- | ----------- |
+| 0   | 1980 | Blondie           | Call Me              | 6           |
+| 1   | 1981 | Chistorpher Cross | Artdurs tdeme        | 3           |
+| 2   | 1982 | Joan Jett         | I Love Rock and Roll | 7           |
+
+</details>
+
+---
