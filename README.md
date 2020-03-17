@@ -44,18 +44,21 @@ More question text
 
 - Here's how you do this
 - Get it?
-```
-    Here's the code
-```
+    ```
+        Here's the code
+    ```
 </details>
 
 <details>
 <summary>Solution</summary>
 
-```python
-    print('Put solution here!')
-```
+    ```python
+        print('Put solution here!')
+    ```
 </details>
 
 
 ```
+Mind the blank line after *\<summary\>* tag. 
+
+Not all tools render html within the markddown. For this reason, question and the instruction shouldn't be in an accordion. Solution is an acceptable inconvenience when using such tools.
