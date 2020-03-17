@@ -68,6 +68,10 @@ Mind the blank line after **\<summary\>** tag.
 
 > Not all tools render html within the markdown. For this reason, question and the instruction shouldn't be in an accordion. Solution is an acceptable inconvenience when using such tools.
 
-### Recommended Tool:
+### Recommended Tools:
 
 [**VS Code**](https://code.visualstudio.com/): renders details tag as expected.
+
+[**markdownTables**](https://jmalarcon.github.io/markdowntables/): convert pandas table output source to markdown.
+
+[**Paste to Markdown**](https://euangoddard.github.io/clipboard2markdown/): Copy formatted text as markdown
