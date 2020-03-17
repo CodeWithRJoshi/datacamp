@@ -7,9 +7,12 @@ pandas DataFrames are the most widely used in-memory representation of complex d
 ---
 ---
 
-### 1. Data ingestion & inspection
+## Data ingestion & inspection
 
 [Slides](./01_chapter1.pdf)
+
+### 1. Review of pandas DataFrames
+
 
 #### Exercise: Inspecting your data
 
@@ -131,3 +134,6 @@ _Output:_
 </details>
 
 ---
+---
+
+### 2. Building DataFrames from scratch
