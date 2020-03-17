@@ -4,9 +4,12 @@
 
 pandas DataFrames are the most widely used in-memory representation of complex data collections within Python. Whether in finance, a scientific field, or data science, familiarity with pandas is essential. This course teaches you to work with real-world datasets containing both string and numeric data, often structured around time series. You will learn powerful analysis, selection, and visualization techniques in this course.
 
-### 1. Data ingestion & inspection
-[Slides](./01_chapter1.pdf)
+---
+---
 
+### 1. Data ingestion & inspection
+
+[Slides](./01_chapter1.pdf)
 
 #### Exercise: Inspecting your data
 
@@ -18,27 +21,29 @@ Your job is to use `df.head()` and `df.tail()` to verify that the first and 
 
 ##### Possible Answers
 
--   First: 1980, 26183676.0; Last: 2000, 35.
+- First: 1980, 26183676.0; Last: 2000, 35.
 
--   First: 1960, 92495902.0; Last: 2014, 15245855.0.
+- First: 1960, 92495902.0; Last: 2014, 15245855.0.
 
--   First: 40.472, 2001; Last: 44.5, 1880.
+- First: 40.472, 2001; Last: 44.5, 1880.
 
--   First: CSS, 104170.0; Last: USA, 95.203.
+- First: CSS, 104170.0; Last: USA, 95.203.
 
 <details>
 <summary>Solution</summary>
-  
-  **First: 1960, 92495902.0; Last: 2014, 15245855.0.**
+
+**First: 1960, 92495902.0; Last: 2014, 15245855.0.**
 
 ```python
     import pandas as pd
     df = pd.read_csv('datasets/world_ind_pop_data.csv')
     print(df.head())
-    print(df.tail())        
+    print(df.tail())
 ```
 
 </details>
+
+---
 
 #### Exercise: DataFrame data types
 
@@ -50,21 +55,20 @@ Select the best description of this data set from the following:
 
 ##### Instructions
 
-
 ##### Possible Answers
 
--   The data is all of type `float64` and none of it is missing.
+- The data is all of type `float64` and none of it is missing.
 
--   The data is of mixed type, and 9914 of it is missing.
+- The data is of mixed type, and 9914 of it is missing.
 
--   The data is of mixed type, and 3460 `float64`s are missing.
+- The data is of mixed type, and 3460 `float64`s are missing.
 
--   The data is all of type `float64`, and 3460 `float64`s are missing.
+- The data is all of type `float64`, and 3460 `float64`s are missing.
 
 <details>
 <summary>Solution</summary>
-  
-  **The data is of mixed type, and 3460 `float64`s are missing.**
+
+**The data is of mixed type, and 3460 `float64`s are missing.**
 
 ```python
       import pandas as pd
@@ -74,7 +78,10 @@ Select the best description of this data set from the following:
       # Above statement makes dataset similar to one DataCamp gives you on console
       df.info()
 ```
+
 </details>
+
+---
 
 #### Exercise: NumPy and pandas working together
 
@@ -82,14 +89,13 @@ Pandas depends upon and interoperates with NumPy, the Python library for fast nu
 
 Your job is to extract the values and store them in an array using the attribute `.values`. You'll then use those values as input into the NumPy `np.log10()` method to compute the base 10 logarithm of the population values. Finally, you will pass the entire pandas DataFrame into the same NumPy `np.log10()` method and compare the results.
 
-
 ##### Instructions
 
--   Import `numpy` using the standard alias `np`.
--   Assign the numerical values in the DataFrame `df` to an array `np_vals` using the attribute `values`.
--   Pass `np_vals` into the NumPy method `log10()` and store the results in `np_vals_log10`.
--   Pass the entire `df` DataFrame into the NumPy method `log10()` and store the results in `df_log10`.
--   Inspect the output of the `print()` code to see the `type()` of the variables that you created.
+- Import `numpy` using the standard alias `np`.
+- Assign the numerical values in the DataFrame `df` to an array `np_vals` using the attribute `values`.
+- Pass `np_vals` into the NumPy method `log10()` and store the results in `np_vals_log10`.
+- Pass the entire `df` DataFrame into the NumPy method `log10()` and store the results in `df_log10`.
+- Inspect the output of the `print()` code to see the `type()` of the variables that you created.
 
 <details>
 <summary>Solution</summary>
@@ -114,10 +120,14 @@ Your job is to extract the values and store them in an array using the attribute
     [print(x, 'has type', type(eval(x))) for x in ['np_vals', 'np_vals_log10', 'df', 'df_log10']]
 
 ```
-*Output:*
+
+_Output:_
 
     np_vals has type <class 'numpy.ndarray'>
     np_vals_log10 has type <class 'numpy.ndarray'>
     df has type <class 'pandas.core.frame.DataFrame'>
     df_log10 has type <class 'pandas.core.frame.DataFrame'>
+
 </details>
+
+---
