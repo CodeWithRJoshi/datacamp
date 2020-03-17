@@ -5,20 +5,24 @@ Directory per course with problems, instruction and solutions in markdown, datas
 ## General Format
 
 ### Some Question Text
+
 More question text
 
 #### Instructions
+
 - Do this
-- DO That
+- Do That
 
 <details>
 <summary>Hints</summary>
 
 - Here's how you do this
 - Get it?
+
 ```
     Here's the code
 ```
+
 </details>
 
 <details>
@@ -27,15 +31,18 @@ More question text
 ```python
     print('Put solution here!')
 ```
+
 </details>
 
 ### Markdown for the above format:
 
-```markdown
+````markdown
 ### Some Question Text
+
 More question text
 
 #### Instructions
+
 - Do this
 - DO That
 
@@ -44,10 +51,8 @@ More question text
 
 - Here's how you do this
 - Get it?
-    ```
-        Here's the code
-    ```
-</details>
+  `Here's the code`
+  </details>
 
 <details>
 <summary>Solution</summary>
@@ -55,10 +60,14 @@ More question text
     ```python
         print('Put solution here!')
     ```
+
 </details>
+````
 
+Mind the blank line after **\<summary\>** tag.
 
-```
-Mind the blank line after *\<summary\>* tag. 
+> Not all tools render html within the markdown. For this reason, question and the instruction shouldn't be in an accordion. Solution is an acceptable inconvenience when using such tools.
 
-Not all tools render html within the markddown. For this reason, question and the instruction shouldn't be in an accordion. Solution is an acceptable inconvenience when using such tools.
+### Recommended Tool:
+
+[**VS Code**](https://code.visualstudio.com/): renders details tag as expected.
